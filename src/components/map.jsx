@@ -13,7 +13,8 @@ function MapDisplay() {
             <div
                 className='map_heading'
             >
-                MapDisplay Here
+                Carbon Footprinting Analysis <FontAwesomeIcon icon={faMapMarkerAlt} />
+                <FontAwesomeIcon icon={faMapPin} />
             </div>
 
             <div
