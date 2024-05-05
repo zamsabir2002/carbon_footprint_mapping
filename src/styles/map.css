@@ -8,7 +8,6 @@
     align-items: center;
     justify-content: flex-start;
     /* gap: 30px; */
-    overflow: scroll;
 }
 
 .map_heading {
