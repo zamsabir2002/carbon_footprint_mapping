@@ -28,13 +28,15 @@ const Modal = ({ modalDisplay, setModalDisplay }) => {
             <div
                 style={{
                     background: 'white',
-                    maxWidth: '70%',
+                    minWidth: '70%',
                     minHeight: '40%',
                     borderRadius: '10px',
                     display: 'flex',
                     flexDirection: 'column',
                     zIndex: '10',
                     padding: '10px',
+                    margin: '0px 20px',
+                    overflow: 'scroll'
                 }}
             >
                 {/* Closing button and other header information */}
