@@ -67,6 +67,7 @@ function Marker({ pinTop, pinLeft, popUpTop, popUpLeft, desc }) {
 
                 onClick={() => {
                     setModalDisplay(true)
+                    setDisplayDiv(false)
                 }}
             >
                 <FontAwesomeIcon
