@@ -10,7 +10,14 @@ function Marker({ pinTop, pinLeft, popUpTop, popUpLeft, desc }) {
     const [modalDisplay, setModalDisplay] = useState(false)
 
     return (
-        <div>
+        <div
+            tabIndex={"0"}
+            onKeyDown={(e) => {
+                if (e.keyCode === 27 || e.key === "Escape") {
+                    setModalDisplay(false)
+                }
+            }}
+        >
 
             <Modal
                 modalDisplay={modalDisplay}
