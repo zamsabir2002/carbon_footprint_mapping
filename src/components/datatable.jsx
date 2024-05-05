@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/datatable.css'
 const DataTable = () => {
     return (
-        <div className="container">
+        <div className="table_container">
             <table>
                 <thead>
                     <tr>

@@ -36,7 +36,7 @@ const Modal = ({ modalDisplay, setModalDisplay }) => {
                     zIndex: '10',
                     padding: '10px',
                     margin: '0px 20px',
-                    overflow: 'scroll'
+
                 }}
             >
                 {/* Closing button and other header information */}
