@@ -1,0 +1,45 @@
+.modal-overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100dvw;
+    height: 100dvh;
+    background: rgb(0,0,0,0.5);
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal{                    
+    background: white;
+    /* min-width: 70%; */
+    max-width: 80%;
+    min-height: 40%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    padding: 10px;
+    margin: 0px 20px;
+}
+
+.cancel_button{
+    align-self: flex-end;
+    padding-right: 10px;
+    cursor: pointer;
+    color: red;
+    font-weight: 700;
+}
+
+.modal_content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+@media only screen and (min-width: 1350px) {
+    #modal{
+        max-width: 70%;
+    }
+}

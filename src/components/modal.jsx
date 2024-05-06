@@ -1,20 +1,12 @@
 import React from 'react';
 import DataTable from './datatable';
+import '../styles/modal.css'
 
 const Modal = ({ modalDisplay, setModalDisplay }) => {
     return (
         modalDisplay && <div
             style={{
                 display: modalDisplay ? 'flex' : 'none',
-                position: 'fixed',
-                top: '0px',
-                left: '0px',
-                width: '100dvw',
-                height: '100dvh',
-                background: 'rgb(0,0,0,0.5)',
-                zIndex: '2',
-                alignItems: 'center',
-                justifyContent: 'center',
             }}
 
             className='modal-overlay'
@@ -26,28 +18,12 @@ const Modal = ({ modalDisplay, setModalDisplay }) => {
             }}
         >
             <div
-                style={{
-                    background: 'white',
-                    minWidth: '70%',
-                    minHeight: '40%',
-                    borderRadius: '10px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    zIndex: '10',
-                    padding: '10px',
-                    margin: '0px 20px',
-
-                }}
+                style={{}}
+                id='modal'
             >
                 {/* Closing button and other header information */}
                 <div
-                    style={{
-                        alignSelf: 'flex-end',
-                        paddingRight: '10px',
-                        cursor: 'pointer',
-                        color: 'red',
-                        fontWeight: '700',
-                    }}
+                    className='cancel_button'
                     onClick={() => {
                         setModalDisplay(false)
                     }}
@@ -55,12 +31,7 @@ const Modal = ({ modalDisplay, setModalDisplay }) => {
 
                 {/* THE DATA */}
                 <div
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: '10px',
-                        width: '100%',
-                    }}
+                    className='modal_content'
                 >
                     <div
                         style={{
