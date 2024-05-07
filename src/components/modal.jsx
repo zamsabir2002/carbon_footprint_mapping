@@ -1,8 +1,8 @@
 import React from 'react';
-import DataTable from './datatable';
+// import DataTable from './datatable';
 import '../styles/modal.css'
 
-const Modal = ({ modalDisplay, setModalDisplay }) => {
+const Modal = ({ modalDisplay, setModalDisplay , DataTable}) => {
     return (
         modalDisplay && <div
             style={{
@@ -33,27 +33,9 @@ const Modal = ({ modalDisplay, setModalDisplay }) => {
                 <div
                     className='modal_content'
                 >
-                    <div
-                        style={{
-                            width: '100%',
-                            textAlign: 'center',
-                        }}
-                    >
-                        <h2>Project Details</h2>
                         <div>
-                            <b>Project Name:</b> ASF Towers
+                            {DataTable}
                         </div>
-                        <div>
-                            <b>Site Location:</b> Sector 35 A, Gulzar-e-Hijri, Scheme 33
-                        </div>
-                        <div>
-                            <b>No of story of Project:</b> G+20
-                        </div>
-
-                    </div>
-                    <div>
-                        <DataTable />
-                    </div>
                 </div>
 
             </div>
