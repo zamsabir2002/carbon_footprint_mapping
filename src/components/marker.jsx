@@ -5,7 +5,7 @@ import '../styles/map.css'
 import DataTable from './datatable'
 import Modal from './modal';
 
-function Marker({ pinTop, pinLeft, popUpTop, popUpLeft, floors , hoverTitle, hoverAddress, carbonFootprint, image}) {
+function Marker({ pinTop, pinLeft, popUpTop, popUpLeft, floors, hoverTitle, hoverAddress, carbonFootprint, image }) {
 
     const [displayDiv, setDisplayDiv] = useState(false)
     const [modalDisplay, setModalDisplay] = useState(false)
@@ -24,13 +24,13 @@ function Marker({ pinTop, pinLeft, popUpTop, popUpLeft, floors , hoverTitle, hov
                 modalDisplay={modalDisplay}
                 setModalDisplay={setModalDisplay}
                 DataTable={
-                <DataTable
-                    siteName={hoverTitle}
-                    address={hoverAddress}
-                    carbonFootprint={carbonFootprint}
-                    floors={floors}
-                />
-            }
+                    <DataTable
+                        siteName={hoverTitle}
+                        address={hoverAddress}
+                        carbonFootprint={carbonFootprint}
+                        floors={floors}
+                    />
+                }
             />
 
             <div
@@ -46,8 +46,16 @@ function Marker({ pinTop, pinLeft, popUpTop, popUpLeft, floors , hoverTitle, hov
                 onMouseLeave={() => {
                     setDisplayDiv(false)
                 }}
-            >   
-                <img src={image} style={{padding: "4px 5px 4px 0px", height: "150px", alignSelf: "center", borderRadius: "15px"}} alt="Logo" />
+
+                onClick={() => {
+                    setModalDisplay(true)
+                    setDisplayDiv(false)
+                }}
+            >
+                <img
+                    src={image}
+                    style={{ padding: "4px 5px 4px 0px", height: "150px", alignSelf: "center", borderRadius: "15px" }} alt="Logo"
+                />
                 <div
                     style={{
                         padding: "4px 5px 4px 0px",
@@ -75,7 +83,7 @@ function Marker({ pinTop, pinLeft, popUpTop, popUpLeft, floors , hoverTitle, hov
                 onMouseEnter={() => {
                     setDisplayDiv(true)
                 }}
-                onMouseLeave={(e) => {
+                onMouseLeave={() => {
                     setDisplayDiv(false)
                 }}
 

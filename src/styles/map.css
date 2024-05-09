@@ -46,4 +46,5 @@
     background: radial-gradient(343px at 46.3% 47.5%, rgba(242, 242, 242, 0.9) 0%, rgb(241, 241, 241) 72.9%);
     transition-property: all;
     transition: 2s ease;
+    cursor: pointer;
 }

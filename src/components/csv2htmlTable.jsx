@@ -44,12 +44,12 @@ const CsvToHtmlTable = ({
         <tbody>
           {
             rows.map((row, rowIdx) => (
-              <tr className={tableRowClassName} key={typeof(rowKey) === 'function' ? rowKey(row, rowIdx) : rowIdx}>
+              <tr className={tableRowClassName} key={typeof (rowKey) === 'function' ? rowKey(row, rowIdx) : rowIdx}>
                 {
                   row.map && row.map((column, colIdx) => (
                     <td
                       className={tableColumnClassName}
-                      key={typeof(rowKey) === 'function' ? colKey(row, colIdx, rowIdx) : column[colKey]}
+                      key={typeof (rowKey) === 'function' ? colKey(row, colIdx, rowIdx) : column[colKey]}
                     >
                       {typeof renderCell === "function" ? renderCell(column, colIdx, rowIdx) : column}
                     </td>
