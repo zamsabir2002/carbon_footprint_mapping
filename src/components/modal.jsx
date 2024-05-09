@@ -2,7 +2,7 @@ import React from 'react';
 // import DataTable from './datatable';
 import '../styles/modal.css'
 
-const Modal = ({ modalDisplay, setModalDisplay , DataTable}) => {
+const Modal = ({ modalDisplay, setModalDisplay, DataTable }) => {
     return (
         modalDisplay && <div
             style={{
@@ -33,9 +33,9 @@ const Modal = ({ modalDisplay, setModalDisplay , DataTable}) => {
                 <div
                     className='modal_content'
                 >
-                        <div>
-                            {DataTable}
-                        </div>
+                    <>
+                        {DataTable}
+                    </>
                 </div>
 
             </div>

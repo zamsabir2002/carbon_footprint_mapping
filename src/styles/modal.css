@@ -1,16 +1,16 @@
-.modal-overlay{
+.modal-overlay {
     position: fixed;
     top: 0px;
     left: 0px;
     width: 100dvw;
     height: 100dvh;
-    background: rgb(0,0,0,0.5);
+    background: rgb(0, 0, 0, 0.5);
     z-index: 2;
     align-items: center;
     justify-content: center;
 }
 
-#modal{                    
+#modal {
     background: white;
     /* min-width: 70%; */
     max-width: 80%;
@@ -21,9 +21,11 @@
     z-index: 10;
     padding: 10px;
     margin: 0px 20px;
+    max-height: 85dvh;
+
 }
 
-.cancel_button{
+.cancel_button {
     align-self: flex-end;
     padding-right: 10px;
     cursor: pointer;
@@ -31,15 +33,17 @@
     font-weight: 700;
 }
 
-.modal_content{
+.modal_content {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 100%;
+    max-height: 80%;
+    overflow: auto;
 }
 
 @media only screen and (min-width: 1350px) {
-    #modal{
+    #modal {
         max-width: 70%;
     }
 }
