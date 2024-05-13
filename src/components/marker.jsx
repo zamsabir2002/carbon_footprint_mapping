@@ -1,14 +1,43 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import '../styles/map.css'
 import DataTable from './datatable'
 import Modal from './modal';
 
-function Marker({ pinTop, pinLeft, popUpTop, popUpLeft, index, floors, hoverTitle, hoverAddress, carbonFootprint, image }) {
+function Marker({
+    district,
+    index,
+    pinTop,
+    pinLeft,
+    popUpTop,
+    popUpLeft,
+    image
+}) {
 
     const [displayDiv, setDisplayDiv] = useState(false)
     const [modalDisplay, setModalDisplay] = useState(false)
+
+    const [projectSite, setProjectSite] = useState('')
+    const [floors, setFloors] = useState('')
+    const [carbonFootprint, setCarbonFootprint] = useState('')
+    const [hoverAddress, setHoverAddress] = useState('')
+    const [data, setData] = useState('')
+
+    console.log(`./data/${district}/${district}-${index}.csv`)
+    useEffect(() => {
+        fetch(`./data/${district}/${district}-${index}.csv`)
+            .then(response => response.text())
+            .then(responseText => {
+                let listResponse = responseText.split('\n')
+                let projectDetails = listResponse.slice(0, 4)
+                setProjectSite(projectDetails[0].split(',')[1])
+                setHoverAddress(projectDetails[1].split(',')[1])
+                setFloors(projectDetails[2].split(',')[1])
+                setCarbonFootprint(projectDetails[3].split(',')[1])
+                setData(listResponse.slice(4, -1).join('\n'));
+            });
+    }, [district])
 
     return (
         <div
@@ -21,11 +50,13 @@ function Marker({ pinTop, pinLeft, popUpTop, popUpLeft, index, floors, hoverTitl
         >
 
             <Modal
+                district={district}
                 modalDisplay={modalDisplay}
                 setModalDisplay={setModalDisplay}
                 DataTable={
                     <DataTable
-                        siteName={hoverTitle}
+                        data={data}
+                        siteName={projectSite}
                         address={hoverAddress}
                         carbonFootprint={carbonFootprint}
                         floors={floors}
@@ -62,7 +93,7 @@ function Marker({ pinTop, pinLeft, popUpTop, popUpLeft, index, floors, hoverTitl
                         fontWeight: 'bold'
                     }}
                 >
-                    {hoverTitle}
+                    {projectSite}
                 </div>
                 <hr />
                 <div>

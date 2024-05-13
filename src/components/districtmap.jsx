@@ -13,7 +13,6 @@ const DistrictMapDisplay = ({ district, setDistrict, setFullMap }) => {
             fetch(`./data/${district}/location.csv`)
                 .then(response => response.text())
                 .then(responseText => {
-                    // changeDistrict(responseText.split('\r\n'))
                     setLocations(responseText.split('\n'))
                 });
         }
@@ -57,7 +56,8 @@ const DistrictMapDisplay = ({ district, setDistrict, setFullMap }) => {
                     // console.log(idx, each_loc)
                     // places = each_loc.split(',')
                     return (
-                        < Marker
+                        <Marker
+                            district={district}
                             pinTop={each_loc.split(',')[0]}
                             pinLeft={each_loc.split(',')[1]}
                             popUpTop={each_loc.split(',')[2]}

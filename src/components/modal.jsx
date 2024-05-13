@@ -2,7 +2,7 @@ import React from 'react';
 // import DataTable from './datatable';
 import '../styles/modal.css'
 
-const Modal = ({ modalDisplay, setModalDisplay, DataTable }) => {
+const Modal = ({ district, modalDisplay, setModalDisplay, DataTable }) => {
     return (
         modalDisplay && <div
             style={{

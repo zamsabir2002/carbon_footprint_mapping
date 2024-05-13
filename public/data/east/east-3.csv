@@ -5,10 +5,7 @@ Site Clearance,Wheel Tractor Scrapers,-,-,-,-,-,-,-,-
 ,Dewatering Pump,-,-,-,-,-,-,-,-
 ,Loader,Moving Soil / Rocks,Old,Diesel,60,4,2.64,158.4,Kg of CO2
 ,Dumper,Dumping Soil,Old,Diesel,60,8,2.64,158.4,Kg of CO2
-Excavation,"Excavators
-Excavators
-Excavators
-Excavators",Excavation,Old,Diesel,85,6,2.64,224.4,Kg of CO2
+Excavation,Excavators,Excavation,Old,Diesel,85,6,2.64,224.4,Kg of CO2
 ,Dumper,Moving excavated soil,Old,DIesel,40,5,2.64,105.6,Kg of CO2
 ,Dewatering Pump,Getting rid of water,Old,DIesel,4,5,2.64,10.56,Kg of CO2
 ,Bulldozer,-,,,-,-,-,-,-
