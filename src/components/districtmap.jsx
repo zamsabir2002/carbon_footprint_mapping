@@ -6,9 +6,7 @@ import { faLongArrowLeft } from '@fortawesome/free-solid-svg-icons';
 const DistrictMapDisplay = ({ district, setDistrict, setFullMap }) => {
 
     const [locations, setLocations] = useState([])
-    const changeDistrict = (loc) => {
-        setLocations(loc)
-    }
+
     useEffect(() => {
         if (district !== 'west') {
             setLocations([])
@@ -16,7 +14,7 @@ const DistrictMapDisplay = ({ district, setDistrict, setFullMap }) => {
                 .then(response => response.text())
                 .then(responseText => {
                     // changeDistrict(responseText.split('\r\n'))
-                    setLocations(responseText.split('\r\n'))
+                    setLocations(responseText.split('\n'))
                 });
         }
         else {
@@ -53,10 +51,10 @@ const DistrictMapDisplay = ({ district, setDistrict, setFullMap }) => {
                     Back to Full Map
                 </div>
             </div>
-            {console.log(locations)}
+
             {
                 locations.map((each_loc, idx) => {
-                    console.log(idx, each_loc)
+                    // console.log(idx, each_loc)
                     // places = each_loc.split(',')
                     return (
                         < Marker
