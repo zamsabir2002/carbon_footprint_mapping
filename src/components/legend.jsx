@@ -2,10 +2,11 @@ import React from "react";
 import "../styles/legend.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquare } from "@fortawesome/free-solid-svg-icons";
-const LegendDisplay = ({ district, setDistrict }) => {
+const LegendDisplay = ({ district, setDistrict, setFullMap }) => {
 
     const changeMap = (districtName) => {
         console.log(districtName)
+        setFullMap(false)
         setDistrict(districtName)
     }
 

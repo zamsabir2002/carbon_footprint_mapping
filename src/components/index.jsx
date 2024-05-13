@@ -1,43 +1,23 @@
-import React, { useState } from 'react';
-import FullMapDisplay from './fullmap';
-import './../styles/map.css'
-import DistrictMapDisplay from './districtmap';
+import React, { useState } from "react";
+import FullMapDisplay from "./fullmap";
+import "./../styles/map.css";
+import MapDisplay from "./map";
 
 const Index = () => {
-    const [fullMap, setFullMap] = useState(true)
-    const [districtMap, setDistrictMap] = useState(null)
-    console.log('currr', districtMap)
-    return (
-        <>
-            <div
-                className='container'
-            >
-                <div
-                    className='heading'
-                >
-                    Carbon Footprinting Analysis
-                </div>
-                {
-                fullMap && 
-                <FullMapDisplay 
-                    districtMap={districtMap}
-                    setDistrictMap={setDistrictMap}
-                />
-                }
-                {
-                    !!districtMap && <DistrictMapDisplay
-                        district={districtMap}
-                    />
-                }
-            </div>
-        </>
-    );
-}
+  return (
+    <>
+      <div className="container">
+        <div className="heading">Carbon Footprinting Analysis</div>
+        <MapDisplay />
+      </div>
+    </>
+  );
+};
 
 export default Index;
 
-
-{/* <Marker
+{
+  /* <Marker
                     pinTop="168px"
                     pinLeft="282px"
                     popUpTop="77px"
@@ -47,4 +27,5 @@ export default Index;
                     hoverAddress="Block 3 A, Gulistan-e-Jouhar"
                     carbonFootprint="9.1"
                     image={kings_residency}
-                /> */}
+                /> */
+}
