@@ -6,7 +6,7 @@ const DataTable = ({ siteName, address, floors, carbonFootprint }) => {
     const [data, setData] = useState('')
 
     useEffect(() => {
-        fetch('./1.csv')
+        fetch('./data/1.csv')
             .then(response => response.text())
             .then(responseText => {
                 setData(responseText);

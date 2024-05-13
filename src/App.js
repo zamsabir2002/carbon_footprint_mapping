@@ -1,10 +1,10 @@
 import './App.css';
-import MapDisplay from './components/map';
+import Index from './components';
 
 function App() {
   return (
     <>
-      <MapDisplay />
+      <Index />
     </>
   );
 }

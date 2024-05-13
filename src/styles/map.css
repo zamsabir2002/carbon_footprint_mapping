@@ -10,24 +10,25 @@
     /* gap: 30px; */
 }
 
-.map_heading {
-    font-size: 2.5rem;
-    padding: 25px 0px;
-}
-
 .image_container {
     width: fit-content;
     position: relative;
-
+    /* background-color: rgba(255, 228, 196, 0.67); */
+    border-radius: 10px;
+    /* padding: 20px 5px 5px; */
+    text-align: center;
 }
 
 .map_image {
     width: 600px;
     height: auto;
     border-radius: 2%;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); */
 }
 
+.map_image_2 {
+    /* filter: drop-shadow(1px 2px 4px rgb(33, 31, 31)); */
+}
 
 .pin_point {
     position: absolute;
