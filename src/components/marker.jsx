@@ -5,7 +5,7 @@ import '../styles/map.css'
 import DataTable from './datatable'
 import Modal from './modal';
 
-function Marker({ pinTop, pinLeft, popUpTop, popUpLeft, floors, hoverTitle, hoverAddress, carbonFootprint, image }) {
+function Marker({ pinTop, pinLeft, popUpTop, popUpLeft, index, floors, hoverTitle, hoverAddress, carbonFootprint, image }) {
 
     const [displayDiv, setDisplayDiv] = useState(false)
     const [modalDisplay, setModalDisplay] = useState(false)
