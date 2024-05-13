@@ -1,0 +1,32 @@
+.legend_container {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.legend_key {
+  display: inline-block;
+  width: 40px;
+  height: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.each_legend {
+  cursor: pointer;
+  margin: 2px 0px;
+  /* transition: transform 0.5s ease-in-out; */
+  transition: transform 0.5s ease-in-out, padding 0.2s ease-in-out;
+  /* transition: transform 0.5s ease-in-out, margin 0.2s ease-in-out; */
+}
+
+.each_legend:hover {
+  /* margin-top: 3px; */
+  /* margin-bottom: 3px; */
+  padding: 0px 0px 5px;
+  transform: scale3d(1.3, 1.3, 1.3);
+}

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Marker from './marker';
 
 const DistrictMapDisplay = ({ district }) => {
+    console.log('rendered')
     useEffect(() => {
         fetch('./data/east/locations.csv')
             .then(response => response.text())
@@ -33,7 +34,7 @@ const DistrictMapDisplay = ({ district }) => {
                 // image={kings_residency}
                 />
                 <img
-                    src="./images/map.png"
+                    src={`./images/khi-${district}.png`}
                     alt="karachi_map"
                     className='map_image map_image_2'
                     style={{
