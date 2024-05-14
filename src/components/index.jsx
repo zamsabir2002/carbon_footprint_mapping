@@ -7,7 +7,7 @@ const Index = () => {
   return (
     <>
       <div className="container">
-        <div className="heading">Carbon Footprinting Analysis</div>
+        <div className="heading">Carbon Footprint Analysis</div>
         <MapDisplay />
       </div>
     </>
