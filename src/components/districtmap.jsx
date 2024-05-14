@@ -103,7 +103,7 @@ const DistrictMapDisplay = ({ district, setDistrict, setFullMap }) => {
                     width: '600px',
                     paddingLeft: district === 'south' ? '150px' : district === 'east' ? '130px' : '100px',
                 }}
-                loading="eager"
+                loading="lazy"    
             />
         </div>
     );

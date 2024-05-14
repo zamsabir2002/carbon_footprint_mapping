@@ -12,7 +12,7 @@ function FullMap() {
         style={{
           width: "600px",
         }}
-        loading="eager"
+        loading="lazy"
       />
     </div>
   );
