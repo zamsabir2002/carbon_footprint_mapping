@@ -2,10 +2,22 @@ import React, { useEffect, useState } from 'react';
 import Marker from './marker';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import malir from './images/khi-malir.png'
+import east from './images/khi-east.png'
+import west from './images/khi-west.png'
+import central from './images/khi-central.png'
+import south from './images/khi-south.png'
 
 const DistrictMapDisplay = ({ district, setDistrict, setFullMap }) => {
 
     const [locations, setLocations] = useState([])
+    const mapLocations = {
+        'malir': malir,
+        'east': east,
+        'west': west,
+        'central': central,
+        'south': south,
+    }
 
     useEffect(() => {
         if (district !== 'west') {
@@ -84,13 +96,14 @@ const DistrictMapDisplay = ({ district, setDistrict, setFullMap }) => {
             // image={kings_residency}
             /> */}
             <img
-                src={`./images/khi-${district}.png`}
+                src={mapLocations[district]}
                 alt="karachi_map"
                 className='map_image'
                 style={{
                     width: '600px',
                     paddingLeft: district === 'south' ? '150px' : district === 'east' ? '130px' : '100px',
                 }}
+                loading="eager"
             />
         </div>
     );
