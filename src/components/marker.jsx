@@ -24,7 +24,7 @@ function Marker({
     const [hoverAddress, setHoverAddress] = useState('')
     const [data, setData] = useState('')
 
-    console.log(`./data/${district}/${district}-${index}.csv`)
+    console.log(index)
     useEffect(() => {
         fetch(`./data/${district}/${district}-${index}.csv`)
             .then(response => response.text())
