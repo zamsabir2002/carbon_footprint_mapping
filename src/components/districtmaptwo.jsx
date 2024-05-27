@@ -87,9 +87,9 @@ const DistrictMapDisplay = ({ district, setDistrict, setFullMap }) => {
                 </div>
             </div>
             {renderedMarkers}
-            {isLoading ? (
+            {/* {isLoading ? (
                 <div>Loading...</div> // You can replace this with a spinner or placeholder image
-            ) : (
+            ) : ( */}
                 <img
                     src={mapLocations[district]}
                     alt="karachi_map"
@@ -100,7 +100,7 @@ const DistrictMapDisplay = ({ district, setDistrict, setFullMap }) => {
                     }}
                     loading="lazy"
                 />
-            )}
+            {/* )} */}
         </div>
     );
 };
