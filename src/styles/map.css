@@ -1,5 +1,6 @@
 .map_container {
   margin: 0px auto;
+  padding-top: 3dvh;
   /* width: 100dvw; */
   /* height: 100dvh; */
   width: max-content;
