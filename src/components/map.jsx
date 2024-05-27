@@ -3,8 +3,7 @@ import "../styles/map.css";
 import Marker from "./marker";
 import LegendDisplay from "./legend";
 import FullMap from "./fullmap";
-// import DistrictMapDisplay from "./districtmap";
-import DistrictMapDisplay from "./districtmaptwo";
+import DistrictMapDisplay from "./districtmap";
 import "../styles/map.css";
 
 function MapDisplay() {
