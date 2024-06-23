@@ -10,7 +10,7 @@ const DistrictMapDisplay = ({ district, setDistrict, setFullMap }) => {
     useEffect(() => {
         if (district !== 'west') {
             setLocations([])
-            fetch(`./data/${district}/location.csv`)
+            fetch(`./data/new_data/${district}/location.csv`)
                 .then(response => response.text())
                 .then(responseText => {
                     setLocations(responseText.split('\n'))
@@ -63,10 +63,10 @@ const DistrictMapDisplay = ({ district, setDistrict, setFullMap }) => {
                             popUpTop={each_loc.split(',')[2]}
                             popUpLeft={each_loc.split(',')[3]}
                             index={idx}
-                            floors='G+20'
-                            hoverTitle="Kings Shaes Residency"
-                            hoverAddress="Block 3 A, Gulistan-e-Jouhar"
-                            carbonFootprint="100.1"
+                        // floors='G+20'
+                        // hoverTitle="Kings Shaes Residency"
+                        // hoverAddress="Block 3 A, Gulistan-e-Jouhar"
+                        // carbonFootprint="100.1"
                         />
                     )
                 }
@@ -88,7 +88,7 @@ const DistrictMapDisplay = ({ district, setDistrict, setFullMap }) => {
                 alt="karachi_map"
                 className='map_image'
                 style={{
-                    width: '600px',
+                    width: district !== 'malir' ? '600px' : 'auto',
                     paddingLeft: district === 'south' ? '150px' : district === 'east' ? '130px' : '100px',
                 }}
             />

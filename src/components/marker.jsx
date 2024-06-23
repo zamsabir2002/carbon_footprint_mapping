@@ -24,9 +24,9 @@ function Marker({
     const [hoverAddress, setHoverAddress] = useState('')
     const [data, setData] = useState('')
 
-    console.log(`./data/${district}/${district}-${index}.csv`)
+    console.log(`./data/new_data/${district}/${district}-${index}.csv`)
     useEffect(() => {
-        fetch(`./data/${district}/${district}-${index}.csv`)
+        fetch(`./data/new_data/${district}/${district}-${index}.csv`)
             .then(response => response.text())
             .then(responseText => {
                 let listResponse = responseText.split('\n')
@@ -84,8 +84,14 @@ function Marker({
                 }}
             >
                 <img
-                    src={image}
-                    style={{ padding: "4px 5px 4px 0px", height: "150px", alignSelf: "center", borderRadius: "15px" }} alt="Logo"
+                    src={`./data/new_data/images/${projectSite}.jpg`}
+                    style={{
+                        padding: "4px 5px 4px 0px",
+                        height: "150px",
+                        alignSelf: "center",
+                        borderRadius: "15px"
+                    }}
+                    alt="Logo"
                 />
                 <div
                     style={{
@@ -101,7 +107,7 @@ function Marker({
                 </div>
                 <hr />
                 <div>
-                    Carbon Footprint: {carbonFootprint}
+                    Carbon Footprint: {carbonFootprint} / 1000 PPM
                 </div>
             </div>
             <div
@@ -127,7 +133,8 @@ function Marker({
                     icon={faMapMarkerAlt}
                     size="xl"
                     style={{
-                        color: 'blue',
+                        fontSize: '1.7rem',
+                        color: carbonFootprint > 1000 ? 'red' : 'green',
                     }}
                 />
             </div>
