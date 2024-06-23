@@ -3,8 +3,8 @@ import "../styles/map.css";
 import Marker from "./marker";
 import LegendDisplay from "./legend";
 import FullMap from "./fullmap";
-// import DistrictMapDisplay from "./districtmap";
-import DistrictMapDisplay from "./districtmaptwo";
+import DistrictMapDisplay from "./districtmap";
+// import DistrictMapDisplay from "./districtmaptwo";
 import "../styles/map.css";
 
 function MapDisplay() {
@@ -20,12 +20,12 @@ function MapDisplay() {
       />
       {!!fullMap && <FullMap />}
 
-      {!!districtMap && 
-      <DistrictMapDisplay 
-      district={districtMap} 
-      setDistrict={setDistrictMap}
-      setFullMap={setFullMap}
-      />
+      {!!districtMap &&
+        <DistrictMapDisplay
+          district={districtMap}
+          setDistrict={setDistrictMap}
+          setFullMap={setFullMap}
+        />
       }
     </div>
   );

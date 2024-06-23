@@ -23,8 +23,8 @@ function Marker({
     const [carbonFootprint, setCarbonFootprint] = useState('')
     const [hoverAddress, setHoverAddress] = useState('')
     const [data, setData] = useState('')
-
-    console.log(`./data/new_data/${district}/${district}-${index}.csv`)
+    
+    // console.log(`./data/new_data/${district}/${district}-${index}.csv`)
     useEffect(() => {
         fetch(`./data/new_data/${district}/${district}-${index}.csv`)
             .then(response => response.text())

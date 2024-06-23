@@ -65,7 +65,7 @@ const DistrictMapDisplay = ({ district, setDistrict, setFullMap }) => {
 
             {
                 locations.map((each_loc, idx) => {
-                    // console.log(idx, each_loc)
+                    console.log("LCOASDLKJASL", idx, each_loc)
                     // places = each_loc.split(',')
                     return (
                         <Marker
@@ -100,10 +100,9 @@ const DistrictMapDisplay = ({ district, setDistrict, setFullMap }) => {
                 alt="karachi_map"
                 className='map_image'
                 style={{
-                    width: district !== 'malir' ? '600px' : 'auto',
+                    // width: district !== 'malir' ? '600px' : 'auto',
                     paddingLeft: district === 'south' ? '150px' : district === 'east' ? '130px' : '100px',
                 }}
-                loading="lazy"    
             />
         </div>
     );
