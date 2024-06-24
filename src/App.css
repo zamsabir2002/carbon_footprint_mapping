@@ -66,8 +66,8 @@ footer {
   color: #61dafb;
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1440px) {
   footer {
-    /* position: absolute; */
+    position: absolute;
   }
 }
