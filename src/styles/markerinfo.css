@@ -1,12 +1,14 @@
 .marker_info_container {
-  position: absolute;
+  /* position: absolute; */
   top: 200px;
-  right: -320px;
+  /* right: -320px; */
+  right: -300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  overflow: visible;
 }
 
 .marker_info_content {
@@ -14,11 +16,9 @@
   gap: 5px;
   align-items: center;
   /* justify-content: space-between; */
-  width: 100%;
+  width: 200px;
 }
 
 .marker_info_content > div {
-  font-size: 1.1rem;
-  font-weight: 600;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1rem;
 }
