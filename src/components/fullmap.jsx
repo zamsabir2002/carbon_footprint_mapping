@@ -10,7 +10,7 @@ function FullMap() {
         alt="karachi_map"
         className="map_image map_image_2"
         style={{
-          width: "auto",
+        //   width: "auto",
         }}
         loading="lazy"
       />

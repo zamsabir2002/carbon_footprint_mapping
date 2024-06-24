@@ -21,9 +21,9 @@
 }
 
 .map_image {
-  /* width: 600px; */
-  width: auto;
-  max-height: 70dvh;
+  width: 600px;
+  /* width: auto; */
+  /* max-height: 70dvh; */
   border-radius: 2%;
   /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); */
 }
@@ -42,9 +42,11 @@
   border-radius: 10px 10px 10px 0px;
   max-width: 40%;
   padding: 10px;
-  background: radial-gradient(343px at 46.3% 47.5%,
-      rgba(242, 242, 242, 0.9) 0%,
-      rgb(241, 241, 241) 72.9%);
+  background: radial-gradient(
+    343px at 46.3% 47.5%,
+    rgba(242, 242, 242, 0.9) 0%,
+    rgb(241, 241, 241) 72.9%
+  );
   transition: all 2s ease;
   cursor: pointer;
 }
