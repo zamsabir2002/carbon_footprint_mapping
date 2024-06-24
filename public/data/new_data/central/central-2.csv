@@ -1,4 +1,4 @@
-Project Name,FL-04,,,,,,,,,
+Project Name,FL-07,,,,,,,,,
 Expected Project Duration,60 months,,,,,,,,,
 No of story of Project,2B+G+14,,,,,,,,,
 Carbon Emission,2454.30,,,,,,,,,
@@ -13,7 +13,7 @@ Excavation,Excavators,Excavation,Old,Diesel,120,8,2.64,316.8,Kg of CO2,-
 ,Dumper,Moving excavated soil,Old,DIesel,40,10,2.64,105.6,Kg of CO2,-
 ,Dewatering Pump,Getting rid of water,Old,DIesel,8,4,2.64,21.12,Kg of CO2,-
 ,Bulldozer,-,Old,Diesel,60,5,-,-,-,-
-Foundation ,Concrete Mixer ,-,-,-,-,-,-,-,-,-
+Foundation,Concrete Mixer,-,-,-,-,-,-,-,-,-
 ,Pile diver,-,-,-,-,-,-,-,-,-
 ,Trencher,-,-,-,-,-,-,-,-,-
 ,Transit Mixer,Concreting,Old,Diesel,70,10,2.64,184.8,Kg of CO2,-
@@ -24,6 +24,6 @@ Sub Structure Work,Mixer,Mixing Concrete,Old,Diesel,100,12,2.64,264,Kg of CO2,-
 ,Vibrator,Proper Compaction,Old,Diesel,40,4,2.64,105.6,Kg of CO2,-
 Floor slab construction,Mixer,Mixing Concrete,Old,Diesel,100,10,2.64,264,Kg of CO2,-
 ,Vibrator,Proper Compaction,Old,Diesel,50,4,2.64,132,Kg of CO2,-
-,Paver,-,-,-,-,-,,,,
+,Paver,-,-,-,-,-,-,-,-,-
 Any other work:,,,,,,,,,,
 Total Carbon Footprint,,,,,853,,,2093.52,Kg of CO2,2454.30

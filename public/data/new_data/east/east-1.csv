@@ -1,7 +1,7 @@
 Project Name,Al Qadir Tower,,,,,,,,,
 Expected Project Duration,60 months,,,,,,,,,
 No of story of Project,2B+G+22,,,,,,,,,
-Carbon Emission,2640.00,,,,,,,,,
+Carbon Emission,2640,,,,,,,,,
 PHASE/STAGE OF CONSTUCTION,Equipment Name,Work,New/Old,Fuel Type (Diesel/Petrol),Fuel Consumption (Liter/day),Hours Operated,Emission Factor,Carbon Footprint,Unit,Unit (PPM)
 Site Clearance,Backhoe,-,-,-,-,-,-,-,-,-
 ,Wheel Tractor Scrapers,-,-,-,-,-,-,-,-,-
@@ -9,8 +9,7 @@ Site Clearance,Backhoe,-,-,-,-,-,-,-,-,-
 ,Dewatering Pump,-,-,-,-,-,-,-,-,-
 ,Loader,Moving Soil / Rocks,-,-,-,-,-,-,-,-
 ,Dumper,Dumping Soil,Old,Diesel,25,8,2.64,66,Kg of CO2,-
-Excavation,"Excavators
-",Excavation,Old,Diesel,150,10,2.64,396,Kg of CO2,-
+Excavation,Excavators,Excavation,Old,Diesel,150,10,2.64,396,Kg of CO2,-
 ,Dumper,Moving excavated soil,Old,DIesel,40,12,2.64,105.6,Kg of CO2,-
 ,Dewatering Pump,Getting rid of water,Old,DIesel,8,4,2.64,21.12,Kg of CO2,-
 ,Bulldozer,-,Old,Diesel,50,4,2.64,132,Kg of CO2,-
@@ -27,4 +26,4 @@ Floor slab construction,Mixer,Mixing Concrete,Old,Diesel,80,10,2.64,211.2,Kg of 
 ,Vibrator,Proper Compaction,Old,Diesel,45,5,2.64,118.8,Kg of CO2,-
 ,Paver,-,-,-,-,-,-,-,-,-
 Any other work:,,,,,,,,,,
-Total Carbon Footprint,,,,,803,,,2119.92,Kg of CO2,2640.00
+Total Carbon Footprint,,,,,803,,,2119.92,Kg of CO2,2640
