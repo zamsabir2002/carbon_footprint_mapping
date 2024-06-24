@@ -103,7 +103,7 @@ function Marker({
                 </div>
                 <hr />
                 <div>
-                    📍 {hoverAddress}
+                    📍 {hoverAddress.replace("\"","")}
                 </div>
                 <hr />
                 <div>

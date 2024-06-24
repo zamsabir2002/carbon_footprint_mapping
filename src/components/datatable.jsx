@@ -14,7 +14,7 @@ const DataTable = ({ data, siteName, address, floors, carbonFootprint }) => {
                     <b>Project Name:</b> {siteName}
                 </div>
                 <div>
-                    <b>Site Location:</b> {address}
+                    <b>Site Location:</b> {address.replace("\"","")}
                 </div>
                 <div>
                     <b>No of story of Project:</b> {floors}
