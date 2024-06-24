@@ -21,9 +21,9 @@
 }
 
 .map_image {
-  width: 600px;
-  /* width: auto; */
-  /* max-height: 70dvh; */
+  /* width: 600px; */
+  width: auto;
+  max-height: 500px;
   border-radius: 2%;
   /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); */
 }
