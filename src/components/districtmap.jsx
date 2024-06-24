@@ -7,6 +7,7 @@ import east from './images/khi-east.png'
 import west from './images/khi-west.png'
 import central from './images/khi-central.png'
 import south from './images/khi-south.png'
+import MarkerInfoDisplay from './markerinfo';
 
 const DistrictMapDisplay = ({ district, setDistrict, setFullMap }) => {
 
@@ -37,6 +38,8 @@ const DistrictMapDisplay = ({ district, setDistrict, setFullMap }) => {
         <div
             className='image_container'
         >
+
+            {/* Arrow to go back to full map */}
             <div
                 className='back_arrow_container'
                 onClick={() => {
@@ -63,10 +66,9 @@ const DistrictMapDisplay = ({ district, setDistrict, setFullMap }) => {
                 </div>
             </div>
 
+            {/* Displaying Location Markers over District wise maps */}
             {
                 locations.map((each_loc, idx) => {
-                    console.log("LCOASDLKJASL", idx, each_loc)
-                    // places = each_loc.split(',')
                     return (
                         <Marker
                             district={district}
@@ -95,6 +97,8 @@ const DistrictMapDisplay = ({ district, setDistrict, setFullMap }) => {
                 carbonFootprint="9.1"
             // image={kings_residency}
             /> */}
+
+            {/* Displaying each district */}
             <img
                 src={mapLocations[district]}
                 alt="karachi_map"
@@ -104,6 +108,7 @@ const DistrictMapDisplay = ({ district, setDistrict, setFullMap }) => {
                     paddingLeft: district === 'south' ? '150px' : district === 'east' ? '130px' : '100px',
                 }}
             />
+            <MarkerInfoDisplay/>
         </div>
     );
 }
