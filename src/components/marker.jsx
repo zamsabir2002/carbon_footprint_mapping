@@ -25,19 +25,73 @@ function Marker({
     const [data, setData] = useState('')
     
     // console.log(`./data/new_data/${district}/${district}-${index}.csv`)
+    // useEffect(() => {
+    //     fetch(`./data/new_data/${district}/${district}-${index}.csv`)
+    //         .then(response => response.text())
+    //         .then(responseText => {
+    //             let listResponse = responseText.split('\n')
+    //             let projectDetails = listResponse.slice(0, 4)
+    //             setProjectSite(projectDetails[0].split(',')[1])
+    //             setHoverAddress(projectDetails[1].split(',')[1])
+    //             setFloors(projectDetails[2].split(',')[1])
+    //             setCarbonFootprint(projectDetails[3].split(',')[1])
+    //             setData(listResponse.slice(4, -1).join('\n'));
+    //         });
+    // }, [district])
     useEffect(() => {
+        const parseCSV = (text) => {
+            const rows = [];
+            let row = [];
+            let cell = '';
+            let insideQuotes = false;
+
+            for (let i = 0; i < text.length; i++) {
+                const char = text[i];
+
+                if (char === '"' && insideQuotes && text[i + 1] === '"') {
+                    cell += '"'; // Handle double quote in quoted cell
+                    i++;
+                } else if (char === '"') {
+                    insideQuotes = !insideQuotes;
+                } else if (char === ',' && !insideQuotes) {
+                    row.push(cell);
+                    cell = '';
+                } else if (char === '\n' && !insideQuotes) {
+                    row.push(cell);
+                    rows.push(row);
+                    row = [];
+                    cell = '';
+                } else {
+                    cell += char;
+                }
+            }
+            // Add the last cell and row
+            if (cell) row.push(cell);
+            if (row.length) rows.push(row);
+
+            return rows;
+        };
+
         fetch(`./data/new_data/${district}/${district}-${index}.csv`)
             .then(response => response.text())
             .then(responseText => {
-                let listResponse = responseText.split('\n')
-                let projectDetails = listResponse.slice(0, 4)
-                setProjectSite(projectDetails[0].split(',')[1])
-                setHoverAddress(projectDetails[1].split(',')[1])
-                setFloors(projectDetails[2].split(',')[1])
-                setCarbonFootprint(projectDetails[3].split(',')[1])
-                setData(listResponse.slice(4, -1).join('\n'));
+                const listResponse = parseCSV(responseText);
+                const projectDetails = listResponse.slice(0, 4);
+                
+                if (projectDetails.length >= 4) {
+                    setProjectSite(projectDetails[0][1] || '');
+                    setHoverAddress(projectDetails[1][1] || '');
+                    setFloors(projectDetails[2][1] || '');
+                    setCarbonFootprint(projectDetails[3][1] || '');
+                }
+
+                const dataRows = listResponse.slice(4);
+                setData(dataRows.map(row => row.join(',')).join('\n'));
+            })
+            .catch(error => {
+                console.error('Error fetching file:', error);
             });
-    }, [district])
+    }, [district, index]);
 
     return (
         <div
