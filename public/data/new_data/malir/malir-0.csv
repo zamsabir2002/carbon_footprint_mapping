@@ -2,7 +2,7 @@ Project Name,Falaknaz Presidency,,,,,,,,,
 Site Location,"Rufi Down Town, Karachi",,,,,,,,,
 No of story of Project,G+20,,,,,,,,,
 Carbon Emission,2600.00,,,,,,,,,
-PHASE/STAGE OF CONSTUCTION,Equipment Name,Work,New/Old,Fuel Type (Diesel/Petrol),Fuel Consumption (Liter/day),Hours Operated,Emission Factor,Carbon Footprint,Unit,Unit (PPM)
+PHASE/STAGE OF CONSTUCTION,Equipment Name,Nature of Activity,New/Old,Fuel Type (Diesel/Petrol),Fuel Consumption (Liter/day),Hours Operated,Emission Factor,Carbon Footprint,Unit,Unit (PPM)
 Site Clearance,Backhoe,-,-,-,-,-,-,-,-,-
 ,Wheel Tractor Scrapers,-,-,-,-,-,-,-,-,-
 ,Bulldozers,-,-,-,-,-,-,-,-,-
@@ -13,7 +13,7 @@ Excavation,Excavators,Excavation,-,-,-,-,-,-,-,-
 ,Dumper,Moving excavated soil,Old,DIesel,20,5,2.64,52.8,Kg of CO2,-
 ,Dewatering Pump,Getting rid of water,-,-,-,-,-,-,-,-
 ,Bulldozer,-,Old,Diesel,50,4,2.64,132,Kg of CO2,-
-Foundation ,Concrete Mixer ,-,old,Diesel,20,3,2.64,52.8,Kg of CO2,-
+Foundation ,Concrete Mixer ,To transfer concrete,old,Diesel,20,3,2.64,52.8,Kg of CO2,-
 ,Pile diver,-,-,-,-,-,-,-,-,-
 ,Trencher,-,-,-,-,-,-,-,-,-
 ,Transit Mixer,Concreting,Old,Diesel,60,5,2.64,158.4,Kg of CO2,-
