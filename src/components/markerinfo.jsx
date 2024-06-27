@@ -16,7 +16,7 @@ const MarkerInfoDisplay = () => {
             color: "green",
           }}
         />
-        <div>Sites with safe carbon footprint</div>
+        <div>Sites with acceptable carbon footprint</div>
       </div>
 
       <div className="marker_info_content">
